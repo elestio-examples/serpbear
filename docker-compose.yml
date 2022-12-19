@@ -13,4 +13,4 @@ services:
       - APIKEY=5saedXklbslhnapihe2pihp3pih4fdnakhjwq5
       - NEXT_PUBLIC_APP_URL=https://${CI_CD_DOMAIN}
     volumes:
-      - ./serpbear_appdata:/app/data
+      - ./data:/app/data
