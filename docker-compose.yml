@@ -13,4 +13,13 @@ services:
       - APIKEY=5saedXklbslhnapihe2pihp3pih4fdnakhjwq5
       - NEXT_PUBLIC_APP_URL=https://${CI_CD_DOMAIN}
     volumes:
-      - ./data:/app/data
+      - serpbear_appdata:/app/data
+
+volumes:
+  serpbear_appdata:
+    driver: local
+    driver_opts:
+     type: none
+     device: ${PWD}/data
+     o: bind
+
