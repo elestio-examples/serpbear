@@ -8,10 +8,11 @@ services:
       - 172.17.0.1:3333:3000
     environment:
       - USER=admin
-      - PASSWORD=0123456789
-      - SECRET=4715aed3216f7b0a38e6b534a958362654e96d10fbc04700770d572af3dce43625dd
-      - APIKEY=5saedXklbslhnapihe2pihp3pih4fdnakhjwq5
+      - PASSWORD=${ADMIN_PASSWORD}
+      - SECRET=${ADMIN_PASSWORD}
+      - APIKEY=${ADMIN_PASSWORD}
       - NEXT_PUBLIC_APP_URL=https://${CI_CD_DOMAIN}
+      - SESSION_DURATION=24
     volumes:
       - serpbear_appdata:/app/data
 
