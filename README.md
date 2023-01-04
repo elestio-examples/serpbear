@@ -15,3 +15,11 @@ You can open SerpBear UI here:
     URL: https://[CI_CD_DOMAIN]
     Login: root
     password: [ADMIN_PASSWORD]
+
+## Configuring
+
+To be able to use Serpbear correctly, you must have a key from a scrapping api.
+Get a free API key from either <a target="_blank" href="https://app.scrapingant.com">ScrapingAnt</a> or <a target="_blank" href="https://scrapingrobot.com/">ScrapingRobot</a>.
+Then, once logged, go to setting section, choose your scrapping method, paste your api key, click to Update Settings button, and reload the page.
+
+For more informations, go to <a target="_blank" href="https://docs.serpbear.com/getting-started">SerpBear Documentations</a>
