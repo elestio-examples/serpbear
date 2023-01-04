@@ -8,8 +8,22 @@ ports:
     path: "/"
     isAuth: false
 environments:
+  - key: "CI_CD_DOMAIN"
+    value: "[CI_CD_DOMAIN]"
+  - key: "ADMIN_EMAIL"
+    value: "[EMAIL]"
   - key: "ADMIN_PASSWORD"
     value: "random_password"
+  - key: "SMTP_SERVER"
+    value: "172.17.0.1"
+  - key: "SMTP_PORT"
+    value: "25"
+  - key: "SMTP_FROM"
+    value: "[DOMAIN]@vm.elestio.app"
+  - key: "SMTP_USER"
+    value: ""
+  - key: "SMTP_PASSWORD"
+    value: ""
 
 config:
   runTime: "dockerCompose"
@@ -27,6 +41,7 @@ lifeCycleConfig:
   postBackupCommand: "./scripts/postBackup.sh"
   preRestoreCommand: "./scripts/preRestore.sh"
   postRestoreCommand: "./scripts/postRestore.sh"
+  postDeployCommand: "./scripts/postDeploy.sh"
 webUI:
   - url: "https://[CI_CD_DOMAIN]"
     label: "SerpBear Admin"
