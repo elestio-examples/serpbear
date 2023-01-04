@@ -5,6 +5,14 @@ sleep 10s;
 
 target=$(docker-compose port app 3000)
 
+curl http://${target}/api/login \
+  -H 'accept: application/json' \
+  -H 'accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7,he;q=0.6' \
+  -H 'content-type: application/json' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36' \
+  --data-raw '{"username":"admin","password":"'${ADMIN_PASSWORD}'"}' \
+  --compressed
+
 
   curl http://${target}/api/settings \
   -X 'PUT' \
