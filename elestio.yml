@@ -10,7 +10,7 @@ ports:
 environments:
   - key: "SOFTWARE_VERSION_TAG"
     value: "latest"
-  - key: "CI_CD_DOMAIN"
+  - key: "DOMAIN"
     value: "[CI_CD_DOMAIN]"
   - key: "ADMIN_EMAIL"
     value: "[EMAIL]"
