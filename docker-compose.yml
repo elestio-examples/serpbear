@@ -11,7 +11,7 @@ services:
       - PASSWORD=${ADMIN_PASSWORD}
       - SECRET=${ADMIN_PASSWORD}
       - APIKEY=${ADMIN_PASSWORD}
-      - NEXT_PUBLIC_APP_URL=https://${CI_CD_DOMAIN}
+      - NEXT_PUBLIC_APP_URL=https://${DOMAIN}
       - SESSION_DURATION=24
     volumes:
       - serpbear_appdata:/app/data
