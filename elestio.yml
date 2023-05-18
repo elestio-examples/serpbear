@@ -8,6 +8,8 @@ ports:
     path: "/"
     isAuth: false
 environments:
+  - key: "SOFTWARE_VERSION_TAG"
+    value: "latest"
   - key: "CI_CD_DOMAIN"
     value: "[CI_CD_DOMAIN]"
   - key: "ADMIN_EMAIL"
@@ -24,7 +26,6 @@ environments:
     value: ""
   - key: "SMTP_PASSWORD"
     value: ""
-
 config:
   runTime: "dockerCompose"
   version: ""
