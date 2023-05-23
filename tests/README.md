@@ -8,9 +8,7 @@
 
 # Serpbear, verified and packaged by Elestio
 
-Import and export the most common formats, work together with your team, instantly deliver translation updates over the air, and more!
-
-[Serpbear](https://docs.serpbear.com/) is the perfect home for managing your translation workflow.
+[Serpbear](https://docs.serpbear.com/) is an Open Source Search Engine Position Tracking App. It allows you to track your website's keyword positions in Google and get notified of their positions.
 
 <img src="https://raw.githubusercontent.com/elestio-examples/serpbear/main/serpbear.gif" alt="serpbear" width="800">
 
