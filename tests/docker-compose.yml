@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.3"
 
 services:
   app:
@@ -20,7 +20,6 @@ volumes:
   serpbear_appdata:
     driver: local
     driver_opts:
-     type: none
-     device: ${PWD}/data
-     o: bind
-
+      type: none
+      device: ${PWD}/data
+      o: bind
