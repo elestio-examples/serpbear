@@ -36,6 +36,13 @@ Copy the .env file from tests folder to the project directory
 
 Edit the .env file with your own values.
 
+Create data folders with correct permissions
+
+    mkdir -p ./serpbear_appdata
+    mkdir -p ./data
+    chown -R 1001:1001 ./serpbear_appdata
+    chown -R 1001:1001 ./data
+
 Run the project with the following command
 
     docker-compose up -d
@@ -46,7 +53,7 @@ You can access the Web UI at: `http://your-domain:3333`
 
 Here are some example snippets to help you get started creating a container.
 
-    version: "3.8"
+    version: "3.3"
 
     services:
     app:
