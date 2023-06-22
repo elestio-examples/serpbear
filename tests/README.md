@@ -56,34 +56,28 @@ Here are some example snippets to help you get started creating a container.
     version: "3.3"
 
     services:
-    app:
-        image: elestio4test/serpbear:latest
-        restart: always
-        ports:
-          - 172.17.0.1:3333:3000
-        environment:
-          - USER=admin
-          - PASSWORD=${ADMIN_PASSWORD}
-          - SECRET=${ADMIN_PASSWORD}
-          - APIKEY=${ADMIN_PASSWORD}
-          - NEXT_PUBLIC_APP_URL=https://${DOMAIN}
-          - SESSION_DURATION=24
-        volumes:
-          - serpbear_appdata:/app/data
-
+        app:
+            image: elestio4test/serpbear:${SOFTWARE_VERSION_TAG}
+            restart: always
+            ports:
+            - 172.17.0.1:3333:3000
+            environment:
+            - USER=admin
+            - PASSWORD=${ADMIN_PASSWORD}
+            - SECRET=${ADMIN_PASSWORD}
+            - APIKEY=${ADMIN_PASSWORD}
+            - NEXT_PUBLIC_APP_URL=https://${DOMAIN}
+            - SESSION_DURATION=24
+            volumes:
+            - serpbear_appdata:/app/data
 
 ### Environment variables
 
-|       Variable       |       Value (example)       |
-| :------------------: | :-------------------------: |
-|     ADMIN_EMAIL      |     admin@yourmail.com      |
-|    ADMIN_PASSWORD    |        your-password        |
-| SOFTWARE_VERSION_TAG |           latest            |
-|        DOMAIN        |     https://your.domain     |
-|    TR_MAIL_SENDER    |     sender@yourmail.com     |
-|     SMTP_SERVER      |         172.17.0.1          |
-|      SMTP_PORT       |             25              |
-|      SMTP_FROM       | serpbear.app@vm.elestio.app |
+|       Variable       |   Value (example)   |
+| :------------------: | :-----------------: |
+|    ADMIN_PASSWORD    |    your-password    |
+| SOFTWARE_VERSION_TAG |       latest        |
+|        DOMAIN        | https://your.domain |
 
 # Maintenance
 
