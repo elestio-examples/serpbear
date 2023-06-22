@@ -60,24 +60,17 @@ Here are some example snippets to help you get started creating a container.
         image: elestio4test/serpbear:latest
         restart: always
         ports:
-        - 172.17.0.1:3333:3000
+          - 172.17.0.1:3333:3000
         environment:
-        - USER=admin
-        - PASSWORD=${ADMIN_PASSWORD}
-        - SECRET=${ADMIN_PASSWORD}
-        - APIKEY=${ADMIN_PASSWORD}
-        - NEXT_PUBLIC_APP_URL=https://${DOMAIN}
-        - SESSION_DURATION=24
+          - USER=admin
+          - PASSWORD=${ADMIN_PASSWORD}
+          - SECRET=${ADMIN_PASSWORD}
+          - APIKEY=${ADMIN_PASSWORD}
+          - NEXT_PUBLIC_APP_URL=https://${DOMAIN}
+          - SESSION_DURATION=24
         volumes:
-        - serpbear_appdata:/app/data
+          - serpbear_appdata:/app/data
 
-    volumes:
-    serpbear_appdata:
-        driver: local
-        driver_opts:
-        type: none
-        device: ${PWD}/data
-        o: bind
 
 ### Environment variables
 
