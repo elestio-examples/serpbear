@@ -1,1 +1,1 @@
-docker build . --tag elestio4test/serpbear:latest;
+docker buildx build . --output type=docker,name=elestio4test/serpbear:latest | docker load
