@@ -6,10 +6,10 @@ services:
     ports:
       - 172.17.0.1:3333:3000
     environment:
-      - USER=${ADMIN_USER}
-      - PASSWORD=${ADMIN_PASSWORD}
-      - SECRET=${ADMIN_PASSWORD}
-      - APIKEY=${ADMIN_PASSWORD}
+      - USER=${USER}
+      - PASSWORD=${PASSWORD}
+      - SECRET=${SECRET}
+      - APIKEY=${APIKEY}
       - NEXT_PUBLIC_APP_URL=https://${DOMAIN}
       - SESSION_DURATION=${SESSION_DURATION}
     volumes:

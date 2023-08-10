@@ -61,10 +61,10 @@ Here are some example snippets to help you get started creating a container.
         ports:
           - 172.17.0.1:3333:3000
         environment:
-          - USER=${ADMIN_USER}
-          - PASSWORD=${ADMIN_PASSWORD}
-          - SECRET=${ADMIN_PASSWORD}
-          - APIKEY=${ADMIN_PASSWORD}
+          - USER=${USER}
+          - PASSWORD=${PASSWORD}
+          - SECRET=${SECRET}
+          - APIKEY=${APIKEY}
           - NEXT_PUBLIC_APP_URL=https://${DOMAIN}
           - SESSION_DURATION=${SESSION_DURATION}
         volumes:
@@ -76,9 +76,11 @@ Here are some example snippets to help you get started creating a container.
 
 |       Variable       |   Value (example)   |
 | :------------------: | :-----------------: |
-|    ADMIN_PASSWORD    |    your-password    |
 | SOFTWARE_VERSION_TAG |       latest        |
-|      ADMIN_USER      |      user-name      |
+|         USER         |        admin        |
+|       PASSWORD       |    your-password    |
+|        SECRET        |     your-Secret     |
+|        APIKEY        |     your-APIKEY     |
 |        DOMAIN        | https://your.domain |
 |   SESSION_DURATION   |         1d          |
 
